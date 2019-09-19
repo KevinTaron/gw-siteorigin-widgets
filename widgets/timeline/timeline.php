@@ -36,11 +36,16 @@ class GW_Widget_Timeline_Widget extends SiteOrigin_Widget {
 				'label' => __('Timeline Items', 'gw-so-widget'),
 				'item_name' => __('Item', 'gw-so-widget'),
 				'item_label' => array(
-					'selector' => "[id*='frames-url']",
+					'selector' => "[id*='month']",
 					'update_event' => 'change',
 					'value_method' => 'val'
 				),
 				'fields' => array(
+					'is_year' => array(
+						'type' => 'checkbox',
+						'description' => __('Jahresbox dann wird nur das Feld month genutzt und mittig gesetzt.', 'gw-so-widget'),
+						'label' => __('Ist Jahresanzeige?', 'gw-so-widget')
+					),
 					'date' => array(
 						'type' => 'text',
 						'description' => __('Anfangszahl in der Timeline. Zahl zwischen 01-31.', 'gw-so-widget'),
